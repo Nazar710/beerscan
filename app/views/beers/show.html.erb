@@ -1,1 +1,14 @@
-show.html.erb
+
+<h1><%= @beer.name %></h1>
+
+<%#cl_image_tag "pixsnecvk3tu5ww0ucsj" %>
+
+<ul>
+  <li><%= @beer.alcohol %></li>
+    <li><%= @beer.ibu %></li>
+    <li><%= @beer.category.name %></li>
+    <li><%= @beer.brewery.name %></li>
+    <li><%= @beer.brewery.country.name %></li>
+    <li><%= @beer.temperature %></li>
+    <li><%= @beer.beer_story %></li>
+</ul>
