@@ -4,4 +4,7 @@ class PagesController < ApplicationController
 
   def design
   end
+
+  def loading
+  end
 end
