@@ -7,6 +7,10 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 Beer.destroy_all
+Brewery.destroy_all
+Country.destroy_all
+Category.destroy_all
+Color.destroy_all
 
 lager = Category.new(name: "lager",  description: "shit beer")
 lager.save

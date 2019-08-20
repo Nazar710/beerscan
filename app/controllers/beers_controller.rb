@@ -1,14 +1,17 @@
 require "pry-byebug"
 
 class BeersController < ApplicationController
+
 before_action :set_beer, only: [:show, :edit, :update, :destroy]
 skip_before_action :verify_authenticity_token, only: [:get_barcode]
+
 
   def index
     @beers = Beer.all
   end
 
   def show
+
   end
 
   def new
@@ -33,4 +36,5 @@ skip_before_action :verify_authenticity_token, only: [:get_barcode]
     def beer_params
       params.require(:beer).permit(:name, :upc, :image_url, :photo)
     end
+
 end

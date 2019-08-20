@@ -1,10 +1,18 @@
-<h1 class='text-center'><%= @beer.name %></h1>
-<h2 class='text-center'><small><%= @beer.id %></small></h2>
-<h1 class='text-center'>Alchool --> <%= @beer.alcohol %></h1>
-<h1 class='text-center'><%= cl_image_tag @beer.photo %></h1>
-<h1 class='text-center'>temperature --> <%= @beer.temperature %></h1>
-<h1 class='text-center'><%= @beer.beer_story %></h1>
 
+<h1><%= @beer.name %></h1>
+
+<%#cl_image_tag "pixsnecvk3tu5ww0ucsj" %>
+
+<ul>
+  <li><h1 class='text-center'><%= cl_image_tag @beer.photo %></h1></li>
+  <li><%= @beer.alcohol %></li>
+    <li><%= @beer.ibu %></li>
+    <li><%= @beer.category.name %></li>
+    <li><%= @beer.brewery.name %></li>
+    <li><%= @beer.brewery.country.name %></li>
+    <li><%= @beer.temperature %></li>
+    <li><%= @beer.beer_story %></li>
+</ul>
 
 <br><br>
 <h1 style="text-align: center;"><%= link_to 'back', root_path  %></h1>

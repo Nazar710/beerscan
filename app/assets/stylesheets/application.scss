@@ -8,9 +8,12 @@
 @import "font-awesome-sprockets";
 @import "font-awesome";
 
-// Your CSS partials
+// Your SCSS partials
 @import "components/index";
+@import "pages/home";
 @import "pages/index";
+@import "pages/design";
+
 
 #barcode-scanner canvas.drawingBuffer, #barcode-scanner video.drawingBuffer {
   display: none;
