@@ -1,3 +1,4 @@
+
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
 #
@@ -10,20 +11,23 @@ Brewery.destroy_all
 Country.destroy_all
 Category.destroy_all
 Color.destroy_all
-lager = Category.new(name: "Lager", description: "Delicious")
+
+lager = Category.new(name: "lager",  description: "shit beer")
 lager.save
-blonde = Color.new(name: "Blonde")
-blonde.save
-denmark = Country.new(name: "Denmark")
+green = Color.new(name: "green")
+green.save
+denmark = Country.new(name: "denmark")
 denmark.save
-carslberg = Brewery.new(name: "Carlsberg", country: denmark)
+cock = Brewery.new(name: "cock", country: denmark)
 
-beer = Beer.new(name: "Carlsberg Pilsner", alcohol: 4.5, temperature: 6)
+puts "hacking in progress..."
+
+url = "https://pbs.twimg.com/media/D88Ug9DXoAUQ1fB.jpg"
+beer = Beer.new(name: "Tuborg", beer_story: "beer is trash anyway", upc: "5740700301544", alcohol: 5.4, temperature: 200000000)
 beer.category = lager
-beer.color = blonde
-beer.brewery = carslberg
-beer.photo = "http://somepicture.com/picture.jpg"
-# When cloudinary and carrierwave are set up
-# beer.remote_photo_url = "http://somepicture.com/picture.jpg"
-
+beer.color = green
+beer.brewery = cock
+beer.remote_photo_url = url
 beer.save!
+
+puts "lmao"
