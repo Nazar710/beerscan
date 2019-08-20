@@ -1,0 +1,10 @@
+<h1 class='text-center'><%= @beer.name %></h1>
+<h2 class='text-center'><small><%= @beer.id %></small></h2>
+<h1 class='text-center'>Alchool --> <%= @beer.alcohol %></h1>
+<h1 class='text-center'><%= cl_image_tag @beer.photo %></h1>
+<h1 class='text-center'>temperature --> <%= @beer.temperature %></h1>
+<h1 class='text-center'><%= @beer.beer_story %></h1>
+
+
+<br><br>
+<h1 style="text-align: center;"><%= link_to 'back', root_path  %></h1>
