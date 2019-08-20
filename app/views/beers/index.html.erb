@@ -10,6 +10,13 @@
     <p><%= beer.brewery.country.name %></p>
   <%= cl_image_tag("pixsnecvk3tu5ww0ucsj",
       width: 400, height: 300, crop: :fill) %>
-
-
   <% end %>
+
+<%= form_tag beers_path, method: :get do %>
+  <%= text_field_tag :query,
+    params[:query],
+    class: "form-control",
+    placeholder: "Find a beer"
+  %>
+  <%= submit_tag "Search", class: "btn btn-primary" %>
+<% end %>
