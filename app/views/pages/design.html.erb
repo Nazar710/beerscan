@@ -1,11 +1,13 @@
+ <div class='row rowly'>
+    <div class="barcode-wrapper">
+      <div id='barcode-scanner'></div>
+      <div> <%= link_to "", root_path, class: "fas fa-angle-double-left go-back" %></div>
+    </div>
+ </div>
 
 
+<%= content_for(:after_js) do %>
+  <%= javascript_pack_tag "barcode-scan" %>
+<% end %>
 
-<!-- <form action="">
-  <input class="input-box" placeholder="beer's name" type="text" name="fname"><br>
-</form> -->
 
-<!-- <div>
-  <a class="btn-hp-scan-share" href="#">scan bar code</a>
-  <a class="btn-hp-scan-share" href="#">search</a>
-</div> -->

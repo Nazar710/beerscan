@@ -38,7 +38,7 @@ function load_quagga(){
         name : "Live",
         type : "LiveStream",
         numOfWorkers: navigator.hardwareConcurrency,
-        target: document.querySelector('#barcode-scanner')
+        target: document.querySelector('#barcode-scanner'),
       },
       decoder: {
           readers : ["ean_reader"]
