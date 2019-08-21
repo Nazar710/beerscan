@@ -20,6 +20,14 @@
         "/packs/js/barcode-scan-2dd80ba3420634bce025.js.map"
       ]
     },
+    "goback": {
+      "js": [
+        "/packs/js/goback-d83b466bff132599e89f.js"
+      ],
+      "js.map": [
+        "/packs/js/goback-d83b466bff132599e89f.js.map"
+      ]
+    },
     "toggler": {
       "js": [
         "/packs/js/toggler-b526d0cdda18a3766f3e.js"
@@ -29,6 +37,8 @@
       ]
     }
   },
+  "goback.js": "/packs/js/goback-d83b466bff132599e89f.js",
+  "goback.js.map": "/packs/js/goback-d83b466bff132599e89f.js.map",
   "toggler.js": "/packs/js/toggler-b526d0cdda18a3766f3e.js",
   "toggler.js.map": "/packs/js/toggler-b526d0cdda18a3766f3e.js.map"
 }
