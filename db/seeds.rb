@@ -23,7 +23,7 @@ cock = Brewery.new(name: "cock", country: denmark)
 puts "hacking in progress..."
 
 url = "https://pbs.twimg.com/media/D88Ug9DXoAUQ1fB.jpg"
-beer = Beer.new(name: "Tuborg", beer_story: "beer is trash anyway", upc: "5740700301544", alcohol: 5.4, temperature: 200000000)
+beer = Beer.new(name: "Tuborg", beer_story: "beer is trash anyway", upc: "5740700301544", alcohol: 5.4, temperature: 200000000, rating: 5)
 beer.category = lager
 beer.color = green
 beer.brewery = cock
