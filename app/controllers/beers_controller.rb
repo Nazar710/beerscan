@@ -6,10 +6,10 @@ skip_before_action :verify_authenticity_token, only: [:get_barcode]
 
   def index
     @beers = Beer.all
+
   end
 
   def show
-
   end
 
   def new
