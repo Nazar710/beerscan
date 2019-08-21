@@ -11,6 +11,7 @@
     <p><%= beer.brewery.country.name %></p>
   <%= cl_image_tag("pixsnecvk3tu5ww0ucsj",
       width: 400, height: 300, crop: :fill) %>
+  <%= render 'star-form', beer: beer %>
   <% end %>
 
 <%= form_tag beers_path, method: :get do %>
