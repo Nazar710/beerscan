@@ -1,18 +1,23 @@
 
+<div class="card-index-container">
+  <% @beers.each do |beer| %>
+    <div class="card-index">
+      <%= cl_image_tag("pixsnecvk3tu5ww0ucsj", class: "img-card-index") %>
+        <div class="info-card-index">
+          <h2><%= beer.name %></h2>
+          <p>ABV : <%= beer.alcohol %>%</p>
+          <p>Category : <%= beer.category.name %></p>
+          <p>Country : <%= beer.brewery.country.name %></p>
+          <div class="d-flex justify-content-center">
+            <%= render 'star-form', beer: beer %>
+          </div>
+           <%= link_to "See more", beer_path(beer), class: "btn-hp-scan-share" %>
+        </div>
+      </div>
+    <% end %>
+  </div>
 
- <% @beers.each do |beer| %>
-    <h4><%= beer.name %></h4>
-    <p><%= beer.alcohol %></p>
-    <p><%= beer.ibu %></p>
-    <p><%= beer.temperature %></p>
-    <p><%= beer.beer_story %></p>
-    <p><%= beer.category.name %></p>
-    <p><%= beer.brewery.name %></p>
-    <p><%= beer.brewery.country.name %></p>
-  <%= cl_image_tag("pixsnecvk3tu5ww0ucsj",
-      width: 400, height: 300, crop: :fill) %>
-  <%= render 'star-form', beer: beer %>
-  <% end %>
+
 
 <%= form_tag beers_path, method: :get do %>
   <%= text_field_tag :query,
