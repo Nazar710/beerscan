@@ -1,36 +1,37 @@
 
 .card-index {
   background-color: white;
-  margin: 20px 20px;
+  padding: 10px;
   display: flex;
-  width: 500px;
-  height: 400px;
+  width: 319px;
+  height: 252px;
   justify-content: space-between;
-  align-items: center;
+  align-items: stretch;
   border-radius: 4px;
   border: 1px solid $beige;
-
-
-
+  margin-bottom: 20px;
 }
 
 .img-card-index {
-  margin: 0px 10px;
+
   background-color: $brown;
-  width: 200px;
+  width: 120px;
   object-fit: cover;
-  height: 95%;
+  height: 229px;
   border-radius: 4px;
 }
 
 .info-card-index {
-  font-size: 24px;
+  font-size: 16px;
   background-color: white;
-  padding: 10px;
-  flex-grow: 1;
+  width: 229px;
+  height: 229px;
+  align-items: stretch;
 
+  margin-left: 20px;
 
 }
-.card-index-container {
 
+p{
+  margin: 0;
 }

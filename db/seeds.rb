@@ -39,4 +39,12 @@ beer.brewery = cock
 beer.remote_photo_url = url
 beer.save!
 
+url = "https://pbs.twimg.com/media/D88Ug9DXoAUQ1fB.jpg"
+beer = Beer.new(name: "Carlsberg", beer_story: "beer is trash anyway", upc: "5740700301544", alcohol: 5.4, temperature: 200000000, rating: 5)
+beer.category = lager
+beer.color = green
+beer.brewery = cock
+beer.remote_photo_url = url
+beer.save!
+
 puts "lmao"
