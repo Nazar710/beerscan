@@ -10,4 +10,7 @@ class PagesController < ApplicationController
 
   def barcode
   end
+
+  def show
+  end
 end
