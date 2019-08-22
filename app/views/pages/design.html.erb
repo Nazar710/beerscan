@@ -1,13 +1,31 @@
+<div class="back-img" style="background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url(https://images.unsplash.com/photo-1533922922960-9fceb9ef4733?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80);">
+  <div class="title">
+    <h1 class="font-size">Looking<br>for a beer?</h1>
+  </div>
+  <div class="center-elements scanner">
+    <%= image_tag "white-bar-code.png", alt: "barcode" %>
+    <a class="btn-hp-scan-share" href="#">scan bar code</a>
+  </div>
+  <br>
+  <br>
+  <div class="center-elements">
+    <form action="">
+      <input class="input-box" placeholder="beer's name" type="text" name="fname" >
+    </form>
+    <a class="btn-hp-scan-share" href="#">share</a>
+  </div>
+</div>
+
+<div class="navbar">
+  <%= link_to root_path do %>
+    <div class="nav-icon">
+      <%= image_tag "wine-scan-code-icon.png", alt: "barcode" %>
+    </div>
+  <% end %>
+
  <div class='row rowly'>
     <div class="barcode-wrapper">
       <div id='barcode-scanner'></div>
       <div> <%= link_to "", root_path, class: "fas fa-angle-double-left go-back" %></div>
     </div>
  </div>
-
-
-<%= content_for(:after_js) do %>
-  <%= javascript_pack_tag "barcode-scan" %>
-<% end %>
-
-
