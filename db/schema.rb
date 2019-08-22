@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_08_21_100820) do
+ActiveRecord::Schema.define(version: 2019_08_22_122925) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -22,6 +22,15 @@ ActiveRecord::Schema.define(version: 2019_08_21_100820) do
     t.datetime "updated_at", null: false
     t.index ["beer_id"], name: "index_beer_foods_on_beer_id"
     t.index ["food_id"], name: "index_beer_foods_on_food_id"
+  end
+
+  create_table "beer_glasses", force: :cascade do |t|
+    t.bigint "category_id"
+    t.bigint "glass_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["category_id"], name: "index_beer_glasses_on_category_id"
+    t.index ["glass_id"], name: "index_beer_glasses_on_glass_id"
   end
 
   create_table "beers", force: :cascade do |t|
@@ -76,8 +85,17 @@ ActiveRecord::Schema.define(version: 2019_08_21_100820) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "glasses", force: :cascade do |t|
+    t.string "photo"
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   add_foreign_key "beer_foods", "beers"
   add_foreign_key "beer_foods", "foods"
+  add_foreign_key "beer_glasses", "categories"
+  add_foreign_key "beer_glasses", "glasses"
   add_foreign_key "beers", "breweries"
   add_foreign_key "beers", "categories"
   add_foreign_key "beers", "colors"
