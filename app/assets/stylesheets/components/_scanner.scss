@@ -1,0 +1,45 @@
+.rowly {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+.barcode-wrapper {
+  position: fixed;
+    #barcode-scanner {
+      width: 100vw;
+      height: 100vh;
+}
+}
+
+.toggler {
+  border-radius: 7px;
+  left: 50%;
+}
+
+.hello {
+  z-index: -50
+}
+
+.go-back {
+    font-size: 125px;
+    opacity: 0.6;
+    color: yellow;
+    background-repeat:no-repeat;
+    width:50%;
+    height:50%;
+    position:absolute;
+    left:0%;
+    right:0%;
+    top: 100%;
+    bottom:0%;
+    margin:auto;
+    background-size:contain;
+    background-position: bottom;
+    &:hoover {
+      text-decoration: none;
+      color: red;
+    }
+}

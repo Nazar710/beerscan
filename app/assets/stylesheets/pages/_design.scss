@@ -1,3 +1,4 @@
+
 .title {
   display: flex;
   text-align: left;
@@ -10,4 +11,20 @@
 
 .font-size {
   font-size: 48px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 375px;
+  height: 60px;
+  background: $my-gray;
+  position: fixed;
+  bottom: 0;
+}
+
+.nav-icon img {
+  width: 32px;
+  height: 32px;
 }

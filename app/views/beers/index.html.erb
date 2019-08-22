@@ -1,17 +1,22 @@
 
+<div class="card-index-container" >
+  <% @beers.each do |beer| %>
+    <div class="card-index">
+      <%= cl_image_tag("https://res.cloudinary.com/dmezivgcm/image/upload/v1566468669/567359_s9peq1.png", class: "img-card-index") %>
+        <div class="info-card-index">
+          <h2><%= beer.name %></h2>
+          <div class="d-flex justify-content-left mt-5">
+            <%= render 'star-form', beer: beer %>
+          </div>
+          <p><%= beer.category.name %></p>
+          <p><%= beer.brewery.country.name %></p>
+           <%= link_to "See more", beer_path(beer), class: "card-btn" %>
+        </div>
+      </div>
+    <% end %>
+</div>
 
- <% @beers.each do |beer| %>
-    <h4><%= beer.name %></h4>
-    <p><%= beer.alcohol %></p>
-    <p><%= beer.ibu %></p>
-    <p><%= beer.temperature %></p>
-    <p><%= beer.beer_story %></p>
-    <p><%= beer.category.name %></p>
-    <p><%= beer.brewery.name %></p>
-    <p><%= beer.brewery.country.name %></p>
-  <%= cl_image_tag("pixsnecvk3tu5ww0ucsj",
-      width: 400, height: 300, crop: :fill) %>
-  <% end %>
+
 
 <%= form_tag beers_path, method: :get do %>
   <%= text_field_tag :query,

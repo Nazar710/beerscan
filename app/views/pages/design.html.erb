@@ -16,6 +16,16 @@
   </div>
 </div>
 
+<div class="navbar">
+  <%= link_to root_path do %>
+    <div class="nav-icon">
+      <%= image_tag "wine-scan-code-icon.png", alt: "barcode" %>
+    </div>
+  <% end %>
 
-
-
+ <div class='row rowly'>
+    <div class="barcode-wrapper">
+      <div id='barcode-scanner'></div>
+      <div> <%= link_to "", root_path, class: "fas fa-angle-double-left go-back" %></div>
+    </div>
+ </div>
