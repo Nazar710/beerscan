@@ -1,13 +1,15 @@
-.input-box {
+.navbar {
   display: flex;
+  justify-content: space-evenly;
   align-items: center;
-  justify-content: center;
-  text-align: center;
-  color: white;
-  font-style: italic;
-  font-size: 28px;
-  width: 319px;
-  height: 74px;
-  background-color: rgba(0,0,0, 0.8);
-  border-radius: 5px;
+  width: 375px;
+  height: 60px;
+  background: $my-gray;
+  position: fixed;
+  bottom: 0;
+}
+
+.nav-icon img {
+  width: 32px;
+  height: 32px;
 }

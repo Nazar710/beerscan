@@ -1,3 +1,11 @@
+
+<div class="navbar">
+  <%= link_to root_path do %>
+    <div class="nav-icon">
+      <%= image_tag "wine-scan-code-icon.png", alt: "barcode" %>
+    </div>
+  <% end %>
+
  <div class='row rowly'>
     <div class="barcode-wrapper">
       <div id='barcode-scanner'></div>
@@ -5,6 +13,16 @@
     </div>
  </div>
 
+  <%= link_to root_path do %>
+    <div class="nav-icon">
+      <%= image_tag "wine_home_icon.png", alt: "home" %>
+    </div>
+  <% end %>
+</div>
+
+
+<!-- <div class="header">
+</div> -->
 
 <%= content_for(:after_js) do %>
   <%= javascript_pack_tag "barcode-scan" %>
