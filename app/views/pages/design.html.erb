@@ -1,9 +1,17 @@
+
 <div class="navbar">
   <%= link_to root_path do %>
     <div class="nav-icon">
       <%= image_tag "wine-scan-code-icon.png", alt: "barcode" %>
     </div>
   <% end %>
+
+ <div class='row rowly'>
+    <div class="barcode-wrapper">
+      <div id='barcode-scanner'></div>
+      <div> <%= link_to "", root_path, class: "fas fa-angle-double-left go-back" %></div>
+    </div>
+ </div>
 
   <%= link_to root_path do %>
     <div class="nav-icon">
@@ -12,14 +20,12 @@
   <% end %>
 </div>
 
+
 <!-- <div class="header">
 </div> -->
 
-<!-- <form action="">
-  <input class="input-box" placeholder="beer's name" type="text" name="fname"><br>
-</form> -->
+<%= content_for(:after_js) do %>
+  <%= javascript_pack_tag "barcode-scan" %>
+<% end %>
 
-<!-- <div>
-  <a class="btn-hp-scan-share" href="#">scan bar code</a>
-  <a class="btn-hp-scan-share" href="#">search</a>
-</div> -->
+
