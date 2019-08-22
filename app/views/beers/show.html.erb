@@ -1,4 +1,4 @@
-
+<!--
 <h1><%= @beer.name %></h1>
 
 <%#cl_image_tag "pixsnecvk3tu5ww0ucsj" %>
@@ -13,10 +13,28 @@
     <li><%= @beer.temperature %></li>
     <li><%= @beer.beer_story %></li>
 </ul>
-
 <br><br>
 <h1 style="text-align: center;"><%= link_to 'back', root_path  %></h1>
 
 
- <%= render 'star-form', beer: @beer %>
+ <%= render 'star-form', beer: @beer %> -->
 
+<div class="row">
+    <div class="col s12 m7">
+      <div class="card" id="show-wrapper">
+        <div class="card-image">
+          <span class="card-title"><%= @beer.name %> </span>
+        </div>
+          <%= cl_image_tag @beer.photo, class: "show-card-image" %>
+        <div class="card-content">
+          <ul>
+            <li><%= @beer.rating %></li>
+            <li>Type: <%= @beer.beer_story %></li>
+          </ul>
+        </div>
+        <div class="card-action">
+          <a href="#">This is a link</a>
+        </div>
+      </div>
+    </div>
+  </div>

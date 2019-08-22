@@ -1,0 +1,22 @@
+
+
+#show-wrapper {
+  text-align: center;
+  margin: 15px 25px;
+  border-radius: 8px;
+    .show-card-image {
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    border-radius: 8px;
+    }
+    .card-image {
+      text-align:left;
+      margin-top: 5%;
+      margin-bottom: 5%;
+      font-size: 20px;
+      .card-title {
+        margin-left: 25%;
+      }
+    }
+}
