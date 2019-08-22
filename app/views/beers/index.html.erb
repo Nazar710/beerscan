@@ -1,21 +1,20 @@
 
-<div class="card-index-container">
+<div class="card-index-container" >
   <% @beers.each do |beer| %>
     <div class="card-index">
-      <%= cl_image_tag("pixsnecvk3tu5ww0ucsj", class: "img-card-index") %>
+      <%= cl_image_tag("https://res.cloudinary.com/dmezivgcm/image/upload/v1566468669/567359_s9peq1.png", class: "img-card-index") %>
         <div class="info-card-index">
           <h2><%= beer.name %></h2>
-          <p>ABV : <%= beer.alcohol %>%</p>
-          <p>Category : <%= beer.category.name %></p>
-          <p>Country : <%= beer.brewery.country.name %></p>
-          <div class="d-flex justify-content-center">
+          <div class="d-flex justify-content-left mt-5">
             <%= render 'star-form', beer: beer %>
           </div>
-           <%= link_to "See more", beer_path(beer), class: "btn-hp-scan-share" %>
+          <p><%= beer.category.name %></p>
+          <p><%= beer.brewery.country.name %></p>
+           <%= link_to "See more", beer_path(beer), class: "card-btn" %>
         </div>
       </div>
     <% end %>
-  </div>
+</div>
 
 
 
