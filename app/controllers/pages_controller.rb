@@ -7,4 +7,10 @@ class PagesController < ApplicationController
 
   def loading
   end
+
+  def barcode
+  end
+
+  def show
+  end
 end
