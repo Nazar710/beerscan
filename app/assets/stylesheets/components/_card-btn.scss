@@ -1,0 +1,17 @@
+.card-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 20px;
+  width: 250px;
+  height: 32px;
+  color: white;
+  background-color: $my-red;
+  font-size: 16px;
+  text-align: center;
+  letter-spacing: 0.02em;
+  border-radius: 5px;
+  font-family: $button-font;
+  margin-top: 20px;
+}
+
