@@ -3,7 +3,6 @@
 <div>
   <%= simple_form_for beer do |f| %>
   <fieldset class="rating">
-    <legend>Please rate:</legend>
     <%= f.radio_button(:rating, "5") %><%= f.label(:rating.to_s + "_5", "Rocks") %>
     <%= f.radio_button(:rating, "4") %><%= f.label(:rating.to_s + "_4", "Pretty good") %>
     <%= f.radio_button(:rating, "3") %><%= f.label(:rating.to_s + "_3", "Meh") %>
