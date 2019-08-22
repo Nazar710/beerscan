@@ -4,7 +4,7 @@
     <div class="card-index">
       <%= cl_image_tag("https://res.cloudinary.com/dmezivgcm/image/upload/v1566468669/567359_s9peq1.png", class: "img-card-index") %>
         <div class="info-card-index">
-          <h2><%= beer.name %></h2>
+          <h3><%= beer.name %></h3>
           <div class="d-flex justify-content-left mt-5">
             <%= render 'star-form', beer: beer %>
           </div>
@@ -18,12 +18,4 @@
 
 
 
-<%= form_tag beers_path, method: :get do %>
-  <%= text_field_tag :query,
-    params[:query],
-    class: "form-control",
-    placeholder: "Find a beer"
-  %>
-  <%= submit_tag "Search", class: "btn btn-primary" %>
-<% end %>
 
