@@ -18,5 +18,3 @@ class Beer < ApplicationRecord
       tsearch: { prefix: true }
     }
 end
-
-
