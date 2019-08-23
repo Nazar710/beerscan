@@ -6,7 +6,7 @@
         <div class="info-card-index">
           <h3><%= beer.name %></h3>
           <div class="d-flex justify-content-left mt-5">
-            <%= render 'star-form', beer: beer %>
+            <%= render 'shared/star-form', beer: beer %>
           </div>
           <p><%= beer.category.name %></p>
           <p><%= beer.brewery.country.name %></p>
