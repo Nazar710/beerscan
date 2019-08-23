@@ -11,6 +11,7 @@ skip_before_action :verify_authenticity_token, only: [:get_barcode]
 
   def show
     @glass = @beer.category.glasses.first
+
   end
 
   def new
