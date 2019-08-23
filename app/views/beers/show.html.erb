@@ -1,5 +1,5 @@
 <!--
-<h1><%= @beer.name %></h1>
+<h1><%#= @beer.name %></h1>
 
 <%#cl_image_tag "pixsnecvk3tu5ww0ucsj" %>
 
@@ -7,17 +7,18 @@
   <li><h1 class='text-center'><%= cl_image_tag @beer.photo %></h1></li>
   <li><%= @beer.alcohol %></li>
     <li><%= @beer.ibu %></li>
-    <li><%= @beer.category.name %></li>
-    <li><%= @beer.brewery.name %></li>
-    <li><%= @beer.brewery.country.name %></li>
+    <li><%#= @beer.category.name %></li>
+    <li><%#= @beer.brewery.name %></li>
+    <li><#%= @beer.brewery.country.name %></li>
     <li><%= @beer.temperature %></li>
     <li><%= @beer.beer_story %></li>
 </ul>
 <br><br>
-<h1 style="text-align: center;"><%= link_to 'back', root_path  %></h1>
+<h1 style="text-align: center;"><%#= link_to 'back', root_path  %></h1>
 
 
- <%= render 'shared/star-form', beer: @beer %> -->
+ <%#= render 'shared/star-form', beer: @beer %> -->
+
 <div class="back-img" style="background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url(https://images.unsplash.com/photo-1533922922960-9fceb9ef4733?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80);">
   <div class="header">
     <div class="row">
@@ -31,11 +32,11 @@
               <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                   <div class="carousel-inner">
                     <div class="carousel-item active ">
-                       <%= cl_image_tag @beer.photo, class: "d-block w-100 show-card-image" %>
+                       <%= cl_image_tag @beer.photo, class: "d-block show-card-image" %>
                     </div>
-                    <div class="carousel-item ">
-                      <%= cl_image_tag @glass.photo, class: "d-block w-100 show-card-image-glass" %>
-                    </div>
+ <!--                    <div class="carousel-item ">
+                      <%#= cl_image_tag @glass.photo, class: "d-block w-100 show-card-image-glass" %>
+                    </div> -->
                   </div>
                   <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
