@@ -7,7 +7,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-puts "destroying everything"
+puts "Destroying everything"
 
 BeerGlass.destroy_all
 BeerFood.destroy_all
@@ -50,7 +50,7 @@ germany = Country.create!(name: "Germany")
 brazil = Country.create!(name: "Brazil")
 
 puts "Creating breweries"
-turborg_brew = Brewery.create!(name: "Tuborg", country: denmark)
+tuborg_brew = Brewery.create!(name: "Tuborg", country: denmark)
 carlsberg_brew = Brewery.create!(name: "Carlsberg", country: denmark)
 praya_brew = Brewery.create!(name: "Praya", country: brazil)
 
@@ -67,12 +67,12 @@ cheese = Food.create!(name: "Cheese")
 puts "Creating beer glasses"
 BeerGlass.create!(category: lager, glass: larger_glass)
 
-puts "creating beer 1"
+puts "Creating beer 1"
 url = "https://res.cloudinary.com/tatigrassi/image/upload/v1566565922/masks_landing/beers_project/bottles%20and%20cans/az_apr17_tuborg_kg62jl.png"
 tuborg = Beer.new(name: "Tuborg", beer_story: "A bottom-fermented lager beer. It's brewed on lager malt, a slightly roasted, bright type of malt which results in the well-known mild, fresh taste and aroma of flowers and grain. The beer is medium rich and lively with a moderate bitterness in the aftertaste.", upc: "5740700301544", alcohol: 7.8, temperature: "5-8", rating: 4, ibu: 10)
 tuborg.category = lager
 tuborg.color = yellow
-tuborg.brewery = turborg_brew
+tuborg.brewery = tuborg_brew
 tuborg.remote_photo_url = url
 tuborg.save!
 
@@ -81,7 +81,7 @@ BeerFood.create!(beer: tuborg, food: seafood)
 BeerFood.create!(beer: tuborg, food: salad)
 BeerFood.create!(beer: tuborg, food: spicy)
 
-puts "creating beer 2"
+puts "Creating beer 2"
 url = "https://res.cloudinary.com/tatigrassi/image/upload/v1566564292/masks_landing/beers_project/bottles%20and%20cans/carlsberg-beer-png-3_mdo8ei.png"
 carlsberg = Beer.new(name: "Carlsberg", beer_story: "Pilsener with a malty backbone and balanced bitterness. Aka: probably the best beer in the world.", upc: "5740700301544", alcohol: 5.4, temperature: 200000000, rating: 5)
 carlsberg.category = pilsen
@@ -95,7 +95,7 @@ BeerFood.create!(beer: carlsberg, food: meat)
 BeerFood.create!(beer: carlsberg, food: chicken)
 BeerFood.create!(beer: carlsberg, food: pasta)
 
-puts "creating beer 3"
+puts "Creating beer 3"
 url = "https://res.cloudinary.com/tatigrassi/image/upload/v1566564313/masks_landing/beers_project/bottles%20and%20cans/tuborg-classic-bottl_ofytdc.png"
 tuborg_classic = Beer.new(name: "Tuborg Classic", beer_story: "The original ’Classic’ was introduced on the occasion of Tuborg’s 120th birthday. Together, the complex combination of several different types of malt results in a playful mixture of an easy-to-drink beer with lots of great taste. The beer is dark in color and has a little bit of sweetness in the taste.", upc: "5740700301544", alcohol: 6.2, temperature: 5, rating: 4)
 tuborg_classic.category = witbier
@@ -109,7 +109,7 @@ BeerFood.create!(beer: tuborg_classic, food: meat)
 BeerFood.create!(beer: tuborg_classic, food: seafood)
 BeerFood.create!(beer: tuborg_classic, food: cheese)
 
-puts "creating beer 4"
+puts "Creating beer 4"
 url = "https://res.cloudinary.com/tatigrassi/image/upload/v1566565119/masks_landing/beers_project/bottles%20and%20cans/hero__0008_superlight_bnhlyr.png"
 tuborg_super_light = Beer.new(name: "Tuborg Super Light", beer_story: "The non-alcoholic version of the Tuborg Green. The pilsner taste is a result of the fact that it is brewed as a real pilsner, where the alcohol is later removed, gently. And, as an added bonus, it’s also low in calories – with just 40% of the calories of an ordinary pilsner.", upc: "5740700301544", alcohol: 0, temperature: 6, rating: 3)
 tuborg_super_light.category = pilsen

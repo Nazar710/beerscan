@@ -7,18 +7,17 @@
     .card-image-wrapper {
     display: flex;
     align-items: center;
+    justify-content: center;
     margin: auto auto;
     border-radius: 8px;
     width: 75%;
     height: 30vh;
     background-color: $brown;
       .show-card-image {
-      margin: auto;
-      width: 75%;
-      border-radius: 8px;
+        border-radius: 8px;
       }
       .show-card-image-glass{
-        max-width:60%;
+        max-width: 60%;
         margin-left: 20%;
       }
     }
@@ -48,6 +47,11 @@
         font-size: 40px;
       }
     }
+}
+
+.carousel-item img {
+  height: 200px;
+  object-cover: fit;
 }
 
 // @keyframes border-pulsate {
