@@ -4,16 +4,11 @@
   </div>
   <div class="center-elements scanner">
     <%= image_tag "white-bar-code.png", alt: "barcode" %>
-    <a class="btn-hp-scan-search" href="#">scan bar code</a>
+    <%= link_to "scan a can", barcode_scanner_path, class: "btn-hp-scan-search"  %>
   </div>
   <br>
   <br>
   <div class="center-elements">
-    <form action="">
-      <input class="input-box" placeholder="beer's name" type="text" name="fname" >
-    </form>
-    <a class="btn-hp-scan-search" href="#">search</a>
+    <%= render 'shared/search' %>
   </div>
 </div>
-
-<h1>  <%= link_to "scan a can", design_path, class: "btn btn-primary toggler"  %> </h1>

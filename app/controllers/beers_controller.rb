@@ -1,17 +1,17 @@
 class BeersController < ApplicationController
-
-before_action :set_beer, only: [:show, :edit, :update, :destroy]
-skip_before_action :verify_authenticity_token, only: [:get_barcode]
-
+  before_action :set_beer, only: [:show, :edit, :update, :destroy]
+  skip_before_action :verify_authenticity_token, only: [:get_barcode]
 
   def index
-    @beers = Beer.all
-
+    if params[:query].present?
+      @beers = Beer.search_by_name(params[:query])
+    else
+      @beers = Beer.all
+    end
   end
 
   def show
     @glass = @beer.category.glasses.first
-
   end
 
   def new
