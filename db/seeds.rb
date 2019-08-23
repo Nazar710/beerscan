@@ -50,7 +50,8 @@ germany = Country.create!(name: "Germany")
 brazil = Country.create!(name: "Brazil")
 
 puts "Creating breweries"
-turborg_brew = Brewery.create!(name: "Tuborg", country: denmark)
+
+tuborg_brew = Brewery.create!(name: "Tuborg", country: denmark)
 carlsberg_brew = Brewery.create!(name: "Carlsberg", country: denmark)
 praya_brew = Brewery.create!(name: "Praya", country: brazil)
 
@@ -72,7 +73,7 @@ url = "https://res.cloudinary.com/tatigrassi/image/upload/v1566565922/masks_land
 tuborg = Beer.new(name: "Tuborg", beer_story: "A bottom-fermented lager beer. It's brewed on lager malt, a slightly roasted, bright type of malt which results in the well-known mild, fresh taste and aroma of flowers and grain. The beer is medium rich and lively with a moderate bitterness in the aftertaste.", upc: "5740700301544", alcohol: 7.8, temperature: "5-8", rating: 4, ibu: 10)
 tuborg.category = lager
 tuborg.color = yellow
-tuborg.brewery = turborg_brew
+tuborg.brewery = tuborg_brew
 tuborg.remote_photo_url = url
 tuborg.save!
 
