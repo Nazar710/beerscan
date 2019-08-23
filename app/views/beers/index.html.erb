@@ -1,20 +1,22 @@
 
-<div class="card-index-container" >
-  <% @beers.each do |beer| %>
-    <div class="card-index">
-      <%= cl_image_tag("https://res.cloudinary.com/dmezivgcm/image/upload/v1566468669/567359_s9peq1.png", class: "img-card-index") %>
-        <div class="info-card-index">
-          <h3><%= beer.name %></h3>
-          <div class="d-flex justify-content-left mt-5">
-            <%= render 'shared/star-form', beer: beer %>
+<div class="header">
+  <div class="card-index-container" >
+    <% @beers.each do |beer| %>
+      <div class="card-index">
+        <%= cl_image_tag("https://res.cloudinary.com/dmezivgcm/image/upload/v1566468669/567359_s9peq1.png", class: "img-card-index") %>
+          <div class="info-card-index">
+            <h3><%= beer.name %></h3>
+            <div class="d-flex justify-content-left mt-5">
+              <%= render 'shared/star-form', beer: beer %>
+            </div>
+            <p><%= beer.category.name %></p>
+            <p><%= beer.brewery.country.name %></p>
+             <%= link_to "See more", beer_path(beer), class: "card-btn" %>
           </div>
-          <p><%= beer.category.name %></p>
-          <p><%= beer.brewery.country.name %></p>
-           <%= link_to "See more", beer_path(beer), class: "card-btn" %>
         </div>
-      </div>
-    <% end %>
+      <% end %>
     <%= render "shared/navbar" %>
+  </div>
 </div>
 
 
