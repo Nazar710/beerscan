@@ -1,5 +1,4 @@
 
-<div class="header"></div>
 
 <div class="card-index-container">
   <% @beers.each do |beer| %>
@@ -9,8 +8,10 @@
       </div>
 
       <div class="info-card-index">
+        <div class="name-space">
         <h3><%= beer.name %></h3>
-        <div class="d-flex justify-content-left mt-5">
+        </div>
+        <div class="d-flex justify-content-left">
           <%= render 'shared/star-form', beer: beer %>
         </div>
         <p><%= beer.category.name %></p>
@@ -18,8 +19,8 @@
          <%= link_to "See more", beer_path(beer), class: "card-btn" %>
       </div>
     </div>
-  <% end %>
   <%= render "shared/navbar" %>
+  <% end %>
 </div>
 
 
