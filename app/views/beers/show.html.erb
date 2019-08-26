@@ -1,42 +1,27 @@
-<!--
-<h1><%#= @beer.name %></h1>
 
-<%#cl_image_tag "pixsnecvk3tu5ww0ucsj" %>
+<div class="card-index-container">
 
-<ul>
-  <li><h1 class='text-center'><%= cl_image_tag @beer.photo %></h1></li>
-  <li><%= @beer.alcohol %></li>
-    <li><%= @beer.ibu %></li>
-    <li><%#= @beer.category.name %></li>
-    <li><%#= @beer.brewery.name %></li>
-    <li><#%= @beer.brewery.country.name %></li>
-    <li><%= @beer.temperature %></li>
-    <li><%= @beer.beer_story %></li>
-</ul>
-<br><br>
-<h1 style="text-align: center;"><%#= link_to 'back', root_path  %></h1>
+  <div class="row">
 
-
- <%#= render 'shared/star-form', beer: @beer %> -->
-
-<div class="back-img" style="background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url(https://images.unsplash.com/photo-1533922922960-9fceb9ef4733?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80);">
-  <div class="header">
-    <div class="row">
-        <div class="col s12 m7">
           <div class="card" id="show-wrapper">
             <div class="card-image">
               <span class="card-title"><%= @beer.name %> </span>
             </div>
 
             <div class="card-image-wrapper">
+
               <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                   <div class="carousel-inner">
                     <div class="carousel-item active ">
                        <%= cl_image_tag @beer.photo, class: "d-block show-card-image" %>
                     </div>
- <!--                    <div class="carousel-item ">
-                      <%#= cl_image_tag @glass.photo, class: "d-block w-100 show-card-image-glass" %>
-                    </div> -->
+                  <div class="carousel-item ">
+                    <% if @glass.empty? %>
+                      <p>No glass picture</p>
+                    <% else %>
+                      <%= cl_image_tag @glass.photo, class: "d-block w-100 show-card-image-glass"%>
+                    <% end %>
+                  </div>
                   </div>
                   <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -50,22 +35,24 @@
 
             </div>
 
-              <div class="card-content">
-              <%= @beer.rating %>
-              <ul class = "show-card-list">
-                <li><strong>Category:</strong> <%= @beer.category.name %></li>
-                <li><strong>Description:</strong> <%= @beer.category.description %></li>
-                <li><strong>Story:</strong> <%= @beer.beer_story %></li>
-                <li><strong>Temperature:</strong> <%= @beer.temperature %> °C</li>
-                <li><strong>Alchool:</strong> <%= @beer.alcohol %>% ABV</li>
-                <li><strong>IBU:</strong> <%= @beer.ibu %></li>
-                <li><strong>Brewery:</strong> <%= @beer.brewery.name %></li>
-                <li><strong>Color:</strong> <%= @beer.color.name %></li>
-              </ul>
+                <div class="d-flex justify-content-center mt-3">
+                  <%= render 'shared/star-form', beer: @beer %>
+                </div>
+
+            <div class="card-content">
+                <ul class = "show-card-list">
+                  <li><strong>Category:</strong> <%= @beer.category.name %></li>
+                  <li><strong>Description:</strong> <%= @beer.category.description %></li>
+                  <li><strong>Story:</strong> <%= @beer.beer_story %></li>
+                  <li><strong>Temperature:</strong> <%= @beer.temperature %> °C</li>
+                  <li><strong>Alchool:</strong> <%= @beer.alcohol %>% ABV</li>
+                  <li><strong>IBU:</strong> <%= @beer.ibu %></li>
+                  <li><strong>Brewery:</strong> <%= @beer.brewery.name %></li>
+                  <li><strong>Color:</strong> <%= @beer.color.name %></li>
+                </ul>
             </div>
           </div>
-          <%= render "shared/navbar" %>
-        </div>
-      </div>
-    </div>
+    <%= render "shared/navbar" %>
+  </div>
 </div>
+
