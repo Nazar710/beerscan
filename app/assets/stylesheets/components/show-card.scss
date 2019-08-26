@@ -41,13 +41,23 @@
       margin-top: 5%;
       margin-bottom: 5%;
       font-size: 20px;
-      .card-title {
-        margin-left: 12%;
-        font-family: $headers-font;
-        font-size: 40px;
-      }
+
     }
 }
+
+.card-title {
+  margin: 12%;
+  font-family: $headers-font;
+  font-size: 40px;
+  display: flex;
+  align-content: flex-start;
+
+
+  }
+
+  span.card-title {
+    line-height: 40px;
+  }
 
 .carousel-item img {
   height: 200px;
