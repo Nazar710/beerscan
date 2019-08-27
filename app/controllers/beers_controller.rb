@@ -11,7 +11,7 @@ class BeersController < ApplicationController
   end
 
   def show
-    @glass = Glass.new
+    @glass = @beer.glass
   end
 
   def new

@@ -4,6 +4,7 @@ require 'open-uri'
 class ScansController < ApplicationController
 
   def create
+    begin
     @scan = Scan.new(scan_params)
     if @scan.save
       split_url = @scan.photo.metadata["url"].split("upload/")
@@ -16,6 +17,9 @@ class ScansController < ApplicationController
       redirect_to beer_path(@beer)
     else
       render :new
+    end
+    rescue
+      redirect_to new_beer_path
     end
   end
 

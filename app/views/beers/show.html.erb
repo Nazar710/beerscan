@@ -1,8 +1,6 @@
 
 <div class="card-index-container">
-
-  <div class="row">
-
+  <div>
           <div class="card" id="show-wrapper">
             <div class="card-image">
               <span class="card-title"><%= @beer.name %> </span>
@@ -14,6 +12,9 @@
                   <div class="carousel-inner">
                     <div class="carousel-item active ">
                        <%= cl_image_tag @beer.photo, class: "d-block show-card-image" %>
+                    </div>
+                    <div class="carousel-item">
+                       <%= cl_image_tag @beer.glass.photo, class: "d-block show-card-image" %>
                     </div>
                   </div>
                   <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
