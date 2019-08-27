@@ -3,8 +3,12 @@
     <h1 class="font-size">Looking<br>for a beer?</h1>
   </div>
   <div class="center-elements scanner">
-    <%= image_tag "white-bar-code.png", alt: "barcode" %>
-    <%= link_to "scan a can", barcode_scanner_path, class: "btn-hp-scan-search"  %>
+    <%= image_tag "button-img.png", alt: "barcode", id: "barcode-picture-home"%>
+    <%= simple_form_for @scan, html: {class: "spicy-form"} do |f| %>
+    <%= f.input :photo, input_html: {onchange: 'this.form.submit();'}, type: "file" %>
+    <%= f.input :photo_cache, as: :hidden %>
+  <% end %>
+
   </div>
   <br>
   <br>
@@ -13,8 +17,3 @@
   </div>
 </div>
 
-<%= simple_form_for(@scan) do |f| %>
-  <%= f.input :photo %>
-  <%= f.input :photo_cache, as: :hidden %>
-  <%= f.submit %>
-<% end %>
