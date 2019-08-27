@@ -9,9 +9,9 @@
 
 puts "Destroying everything"
 
+Beer.destroy_all
 BeerFood.destroy_all
 Glass.destroy_all
-Beer.destroy_all
 Brewery.destroy_all
 Country.destroy_all
 Category.destroy_all
@@ -71,6 +71,7 @@ tuborg.category = lager
 tuborg.color = yellow
 tuborg.brewery = tuborg_brew
 tuborg.remote_photo_url = url
+tuborg.glass = tumbler
 tuborg.save!
 
 puts "Linking food to beer 1"
@@ -85,6 +86,7 @@ carlsberg.category = pilsen
 carlsberg.color = light_yellow
 carlsberg.brewery = carlsberg_brew
 carlsberg.remote_photo_url = url
+carlsberg.glass = tumbler
 carlsberg.save!
 
 puts "Linking food to beer 2"
@@ -99,6 +101,7 @@ tuborg_classic.category = witbier
 tuborg_classic.color = yellow
 tuborg_classic.brewery = tuborg_brew
 tuborg_classic.remote_photo_url = url
+tuborg_classic.glass = tumbler
 tuborg_classic.save!
 
 puts "Linking food to beer 3"
@@ -113,6 +116,7 @@ tuborg_super_light.category = pilsen
 tuborg_super_light.color = light_yellow
 tuborg_super_light.brewery = tuborg_brew
 tuborg_super_light.remote_photo_url = url
+tuborg_super_light.glass = tumbler
 tuborg_super_light.save!
 
 puts "Linking food to beer 4"
