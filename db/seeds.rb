@@ -9,7 +9,6 @@
 
 puts "Destroying everything"
 
-BeerGlass.destroy_all
 BeerFood.destroy_all
 Glass.destroy_all
 Beer.destroy_all
@@ -64,8 +63,6 @@ japanese = Food.create!(name: "Japanese food")
 spicy = Food.create!(name: "Spicy food")
 cheese = Food.create!(name: "Cheese")
 
-puts "Creating beer glasses"
-BeerGlass.create!(category: lager, glass: larger_glass)
 
 puts "Creating beer 1"
 url = "https://res.cloudinary.com/tatigrassi/image/upload/v1566565922/masks_landing/beers_project/bottles%20and%20cans/az_apr17_tuborg_kg62jl.png"
