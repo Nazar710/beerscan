@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_08_26_174022) do
+ActiveRecord::Schema.define(version: 2019_08_27_101405) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -24,15 +24,6 @@ ActiveRecord::Schema.define(version: 2019_08_26_174022) do
     t.index ["food_id"], name: "index_beer_foods_on_food_id"
   end
 
-  create_table "beer_glasses", force: :cascade do |t|
-    t.bigint "category_id"
-    t.bigint "glass_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["category_id"], name: "index_beer_glasses_on_category_id"
-    t.index ["glass_id"], name: "index_beer_glasses_on_glass_id"
-  end
-
   create_table "beers", force: :cascade do |t|
     t.string "name"
     t.text "beer_story"
@@ -43,6 +34,7 @@ ActiveRecord::Schema.define(version: 2019_08_26_174022) do
     t.bigint "category_id"
     t.bigint "color_id"
     t.bigint "brewery_id"
+    t.bigint "glass_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "upc"
@@ -50,6 +42,7 @@ ActiveRecord::Schema.define(version: 2019_08_26_174022) do
     t.index ["brewery_id"], name: "index_beers_on_brewery_id"
     t.index ["category_id"], name: "index_beers_on_category_id"
     t.index ["color_id"], name: "index_beers_on_color_id"
+    t.index ["glass_id"], name: "index_beers_on_glass_id"
   end
 
   create_table "breweries", force: :cascade do |t|
@@ -86,10 +79,10 @@ ActiveRecord::Schema.define(version: 2019_08_26_174022) do
   end
 
   create_table "glasses", force: :cascade do |t|
-    t.string "photo"
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "photo"
   end
 
   create_table "scans", force: :cascade do |t|
@@ -100,10 +93,9 @@ ActiveRecord::Schema.define(version: 2019_08_26_174022) do
 
   add_foreign_key "beer_foods", "beers"
   add_foreign_key "beer_foods", "foods"
-  add_foreign_key "beer_glasses", "categories"
-  add_foreign_key "beer_glasses", "glasses"
   add_foreign_key "beers", "breweries"
   add_foreign_key "beers", "categories"
   add_foreign_key "beers", "colors"
+  add_foreign_key "beers", "glasses"
   add_foreign_key "breweries", "countries"
 end

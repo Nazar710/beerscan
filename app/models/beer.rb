@@ -2,6 +2,8 @@ class Beer < ApplicationRecord
   belongs_to :category
   belongs_to :color
   belongs_to :brewery
+  belongs_to :glass
+
   has_many :beer_foods
   has_many :foods, through: :beer_foods
   validates :name, presence: true, uniqueness: true

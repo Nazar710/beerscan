@@ -1,6 +1,8 @@
 {
-  "application.js": "/packs/js/application-62c12d5b01eec38a2e84.js",
-  "application.js.map": "/packs/js/application-62c12d5b01eec38a2e84.js.map",
+
+  "application.js": "/packs/js/application-5271b7513a0e5e4df23b.js",
+  "application.js.map": "/packs/js/application-5271b7513a0e5e4df23b.js.map",
+
   "barcode-scan.js": "/packs/js/barcode-scan-7c46e40ca18633ce69a4.js",
   "barcode-scan.js.map": "/packs/js/barcode-scan-7c46e40ca18633ce69a4.js.map",
   "entrypoints": {
