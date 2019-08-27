@@ -3,6 +3,8 @@ Rails.application.routes.draw do
     post :get_barcode, on: :collection
   end
 
+  resources :scans, only: [:create]
+
   get 'beers/search', to: 'beers#search', as: :beer_search
   root to: 'pages#home'
   get 'barcode-scanner', to: 'pages#barcode'
