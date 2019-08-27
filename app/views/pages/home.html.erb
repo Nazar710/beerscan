@@ -2,17 +2,14 @@
   <div class="title">
     <h1 class="font-size">Looking<br>for a beer?</h1>
   </div>
-  <div class="center-elements scanner">
+  <div class="center-elements hp-barcode">
     <%= image_tag "button-img.png", alt: "barcode", id: "barcode-picture-home"%>
     <%= simple_form_for @scan, html: {class: "spicy-form"} do |f| %>
     <%= f.input :photo, input_html: {onchange: 'this.form.submit();'}, type: "file" %>
     <%= f.input :photo_cache, as: :hidden %>
-  <% end %>
-
+    <% end %>
   </div>
-  <br>
-  <br>
-  <div class="center-elements">
+  <div class="search-btn">
     <%= render 'shared/search' %>
   </div>
 </div>
