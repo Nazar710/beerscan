@@ -23,3 +23,24 @@
   text-decoration: none;
   color: white;
 }
+
+#home-find-btn {
+  display: flex;
+  align-items: right;
+  justify-content: center;
+  padding: 20px 20px;
+  width: 296px;
+  height: 70px;
+  color: white;
+  background-color: $my-orange;
+  font-size: 20px;
+  text-align: center;
+  letter-spacing: 0.02em;
+  border-radius: 5px;
+  font-family: $button-font;
+}
+
+.home-find-btn:hover {
+  text-decoration: none;
+  color: white;
+}
