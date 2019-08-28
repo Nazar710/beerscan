@@ -24,23 +24,32 @@
   color: white;
 }
 
-#home-find-btn {
+.home-find-btn {
   display: flex;
-  align-items: right;
-  justify-content: center;
-  padding: 20px 20px;
+  justify-content: space-between;
+  padding: 10px 10px;
   width: 296px;
-  height: 70px;
+  height: 68px;
   color: white;
-  background-color: $my-orange;
-  font-size: 20px;
-  text-align: center;
-  letter-spacing: 0.02em;
+  background-color: rgba(250,143,17,0.65);
   border-radius: 5px;
-  font-family: $button-font;
+  margin-bottom: 100px;
 }
 
 .home-find-btn:hover {
   text-decoration: none;
   color: white;
+}
+
+.search-icon {
+  margin-right: 10px;
+  width: 40px;
+  height: 40px;
+  margin-top: 4px;
+}
+
+.search-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

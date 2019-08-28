@@ -1,32 +1,29 @@
+<div class="card-index-background"></div>
 <div class="card-index-container">
   <% @beers.each do |beer| %>
     <div class="card-index">
       <div class="img-card-index">
         <%= cl_image_tag(beer.photo) %>
       </div>
-
       <div class="info-card-index">
         <div class="name-space">
-        <h3><%= beer.name %></h3>
+        <h5><%= beer.name.first(20) %></h5>
+        <h6><%= beer.category.name %> - <%= beer.brewery.name %>, <%= beer.brewery.country.name %></h6>
+        <p><%= beer.category.description.first(55) %>...</p>
         </div>
         <div class="d-flex justify-content-left">
           <% beer.rating.times do %>
-            <i class="fas fa-star"></i>
+            <%= image_tag "beer-active-green-icon", alt: "beer-active", class: "size-icon" %>
           <% end %>
-
           <% (5 - beer.rating).times do %>
-            <i class="far fa-star"></i>
+            <%= image_tag "beer-inactive-gray-icon", alt: "beer-inactive", class: "size-icon" %>
           <% end %>
         </div>
-        <p><%= beer.category.name %></p>
-        <p><%= beer.brewery.country.name %></p>
+        <div class="d-flex justify-content-right">
          <%= link_to "See more", beer_path(beer), class: "card-btn" %>
+        </div>
       </div>
     </div>
   <%= render "shared/navbar" %>
   <% end %>
 </div>
-
-
-
-

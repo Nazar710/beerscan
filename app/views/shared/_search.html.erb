@@ -1,9 +1,10 @@
-<%= form_tag beers_path, method: :get do %>
-  <%= text_field_tag :query,
-    params[:query],
-    class: "input-box",
-    placeholder: "search by name"
-  %>
-  <%= submit_tag "search", class: "btn-hp-scan-search", id: "home-search-btn"  %>
-<% end %>
-
+<div class="home-find-btn">
+  <%= form_tag beers_path, method: :get do %>
+    <%= text_field_tag :query,
+      params[:query],
+      class: "input-box",
+      placeholder: "search by name"
+    %>
+  <% end %>
+    <%= image_tag "white-search-icon.png", alt: "find", class: "search-icon" %>
+</div>
