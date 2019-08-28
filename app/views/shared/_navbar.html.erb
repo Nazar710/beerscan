@@ -2,7 +2,10 @@
     <%= link_to root_path do  %>
     <%= image_tag "orange-home-icon.png",  alt: "home-icon" %>
     <% end %>
-    <%= link_to barcode_scanner_path do  %>
-    <%= image_tag "orange-bar-code.png", alt: "scan-icon" %>
-    <% end %>
+    <%= image_tag "orange-bar-code.png", alt: "scan-icon", id: "navbar-scanner"%>
   </div>
+
+  <%= simple_form_for @scan, html: {class: "spicy-form"} do |f| %>
+    <%= f.input :photo, input_html: {onchange: 'this.form.submit();'}, type: "file" %>
+    <%= f.input :photo_cache, as: :hidden %>
+  <% end %>
