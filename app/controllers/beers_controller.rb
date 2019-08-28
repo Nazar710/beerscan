@@ -3,6 +3,7 @@ class BeersController < ApplicationController
   skip_before_action :verify_authenticity_token, only: [:get_barcode]
 
   def index
+    @scan = Scan.new
     if params[:query].present?
       @beers = Beer.search_by_name(params[:query])
     else
@@ -30,6 +31,7 @@ class BeersController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
   def set_beer
     @beer = Beer.find(params[:id])
+    @scan = Scan.new
   end
 
   # Never trust parameters from the scary internet, only allow the white list through.

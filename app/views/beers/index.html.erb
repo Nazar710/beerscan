@@ -1,5 +1,3 @@
-
-
 <div class="card-index-container">
   <% @beers.each do |beer| %>
     <div class="card-index">
@@ -19,7 +17,6 @@
           <% (5 - beer.rating).times do %>
             <i class="far fa-star"></i>
           <% end %>
-
         </div>
         <p><%= beer.category.name %></p>
         <p><%= beer.brewery.country.name %></p>
@@ -29,7 +26,6 @@
   <%= render "shared/navbar" %>
   <% end %>
 </div>
-
 
 
 

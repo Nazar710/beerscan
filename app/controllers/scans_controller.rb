@@ -19,7 +19,8 @@ class ScansController < ApplicationController
       render :new
     end
     rescue
-      redirect_to new_beer_path
+      flash[:alert] = ''
+      redirect_to beers_path
     end
   end
 
