@@ -35,7 +35,7 @@ $("#barcode-picture-home").click(function() {
   {
     $("#barcode-picture-home").hide();
     $(".spinner").fadeIn('slow');
-  }, 2000);
+  }, 10000);
 
 })
 
