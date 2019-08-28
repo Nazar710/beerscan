@@ -1,5 +1,4 @@
-
-
+<div class="card-index-background"></div>
 <div class="card-index-container">
   <% @beers.each do |beer| %>
     <div class="card-index">
@@ -16,7 +15,6 @@
           <% beer.rating.times do %>
             <%= image_tag "beer-active-green-icon", alt: "beer-active", class: "size-icon" %>
           <% end %>
-
           <% (5 - beer.rating).times do %>
             <%= image_tag "beer-inactive-gray-icon", alt: "beer-inactive", class: "size-icon" %>
           <% end %>
@@ -29,8 +27,3 @@
   <%= render "shared/navbar" %>
   <% end %>
 </div>
-
-
-
-
-
