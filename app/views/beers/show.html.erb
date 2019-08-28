@@ -1,58 +1,49 @@
-
-<div class="card-index-container">
-  <div>
-          <div class="card" id="show-wrapper">
-            <div class="card-image">
-              <span class="card-title"><%= @beer.name %> </span>
+<div class="card-index-background"></div>
+  <div class="card-index-container">
+    <div class="card" id="show-wrapper">
+      <div class="card-image">
+        <span class="card-title"><%= @beer.name %> </span>
+      </div>
+      <div class="card-image-wrapper">
+        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active ">
+              <%= cl_image_tag @beer.photo, class: "d-block show-card-image" %>
             </div>
-
-            <div class="card-image-wrapper">
-
-              <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-                  <div class="carousel-inner">
-                    <div class="carousel-item active ">
-                       <%= cl_image_tag @beer.photo, class: "d-block show-card-image" %>
-                    </div>
-                    <div class="carousel-item">
-                       <%= cl_image_tag @beer.glass.photo, class: "d-block show-card-image" %>
-                    </div>
-                  </div>
-                  <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
-                  </a>
-                  <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
-                  </a>
-              </div>
-
-            </div>
-
-            <div class="d-flex justify-content-center mt-5">
-              <% @beer.rating.times do %>
-                <i class="fas fa-star fa-2x"></i>
-              <% end %>
-
-              <% (5 - @beer.rating).times do %>
-                <i class="far fa-star fa-2x"></i>
-              <% end %>
-            </div>
-
-            <div class="card-content">
-                <ul class = "show-card-list">
-                  <li><strong>Category:</strong> <%= @beer.category.name %></li>
-                  <li><strong>Description:</strong> <%= @beer.category.description %></li>
-                  <li><strong>Story:</strong> <%= @beer.beer_story %></li>
-                  <li><strong>Temperature:</strong> <%= @beer.temperature %> °C</li>
-                  <li><strong>Alchool:</strong> <%= @beer.alcohol %>% ABV</li>
-                  <li><strong>IBU:</strong> <%= @beer.ibu %></li>
-                  <li><strong>Brewery:</strong> <%= @beer.brewery.name %></li>
-                  <li><strong>Color:</strong> <%= @beer.color.name %></li>
-                </ul>
+            <div class="carousel-item">
+              <%= cl_image_tag @beer.glass.photo, class: "d-block show-card-image" %>
             </div>
           </div>
+            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+            </a>
+        </div>
+      </div>
+      <div class="d-flex justify-content-center mt-5">
+        <% @beer.rating.times do %>
+          <i class="fas fa-star fa-2x"></i>
+        <% end %>
+        <% (5 - @beer.rating).times do %>
+          <i class="far fa-star fa-2x"></i>
+        <% end %>
+      </div>
+      <div class="card-content">
+        <ul class = "show-card-list">
+          <li><strong>Category:</strong> <%= @beer.category.name %></li>
+          <li><strong>Description:</strong> <%= @beer.category.description %></li>
+          <li><strong>Story:</strong> <%= @beer.beer_story %></li>
+          <li><strong>Temperature:</strong> <%= @beer.temperature %> °C</li>
+          <li><strong>Alchool:</strong> <%= @beer.alcohol %>% ABV</li>
+          <li><strong>IBU:</strong> <%= @beer.ibu %></li>
+          <li><strong>Brewery:</strong> <%= @beer.brewery.name %></li>
+          <li><strong>Color:</strong> <%= @beer.color.name %></li>
+        </ul>
+      </div>
+    </div>
     <%= render "shared/navbar" %>
   </div>
-</div>
-
