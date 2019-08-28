@@ -3,41 +3,50 @@
   padding: 10px;
   display: flex;
   width: 319px;
-  height: 252px;
+  height: 178px;
   justify-content: space-between;
   align-items: stretch;
   border-radius: 4px;
   border: 1px solid $beige;
-  margin-bottom: 48px;
+  margin-bottom: 25px;
 }
 
 .img-card-index {
-  background-color: $brown;
-  width: 120px;
-  height: 229px;
-  border-radius: 4px;
+  background-color: rgba(190,124,77,0.6);
+  width: 40px;
+  height: 148px;
+  border-radius: 2px;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 3px;
 }
 
 .img-card-index img {
-  object-fit: cover;
-  height: 200px;
+  margin-left: 40px;
+  height: 162px;
 }
 
 .info-card-index {
   font-size: 16px;
   background-color: white;
   width: 229px;
-  height: 229px;
+  height: 120px;
   align-items: stretch;
-  margin-left: 20px;
+  margin-left: 35px;
 }
+
 .name-space {
-min-height: 70px;
+  min-height: 60px;
 }
 
 p{
   margin: 0;
+}
+
+img.size-icon {
+  width: 23px;
+  height: 23px;
+  margin-top: 20px;
+  margin-right: -5px;
 }
