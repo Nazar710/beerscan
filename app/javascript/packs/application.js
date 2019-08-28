@@ -11,3 +11,10 @@ import "bootstrap";
       // console.log(variable)
       variable.trigger("click")
   })
+
+$(".search-icon").click (function() {
+      console.log('submit')
+      let variable = $(".hidden-search")
+      // console.log(variable)
+      variable.trigger("click")
+  })
