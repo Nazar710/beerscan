@@ -14,10 +14,10 @@
       </div>
       <div class="d-flex justify-content-left">
         <% @beer.rating.times do %>
-          <%= image_tag "beer-active-green-icon", alt: "beer-active", class: "size-rate-icon" %>
+          <%= image_tag "beer-active-green-icon.png", alt: "beer-active", class: "size-rate-icon" %>
         <% end %>
         <% (5 - @beer.rating).times do %>
-          <%= image_tag "beer-inactive-gray-icon", alt: "beer-inactive", class: "size-rate-icon" %>
+          <%= image_tag "beer-inactive-gray-icon.png", alt: "beer-inactive", class: "size-rate-icon" %>
         <% end %>
       </div>
       <div class=beer-description-card>
