@@ -18,3 +18,12 @@ $(".search-icon").click (function() {
       // console.log(variable)
       variable.trigger("click")
   })
+
+
+$(".spinner").hide();
+
+
+$(window).bind("beforeunload", function(){
+  $("#barcode-picture-home").hide();
+  $(".spinner").fadeIn('slow');
+});
