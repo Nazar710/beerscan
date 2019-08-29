@@ -6,6 +6,10 @@ class BeersController < ApplicationController
     @scan = Scan.new
     if params[:query].present?
       @beers = Beer.super_search(params[:query])
+      if @beers.empty?
+        flash[:notice] = "Sorry we couldn't find a beer matching #{params[:query]}"
+        @beers = Beer.all
+      end
     else
       @beers = Beer.all
     end
