@@ -1,6 +1,6 @@
-<% if alert %>
+<% if notice %>
   <div class="flash flash-warning alert alert-dismissible fade show" role="alert">
-    <span><strong>Mmh</strong> 🤔 seems like we couldn't find any beer, maybe look for another one  </span>
+    <span><%= notice %> </span>
     <a data-dismiss="alert" aria-label="Close">
       <i class="fas fa-times"></i>
     </a>

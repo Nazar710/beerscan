@@ -28,14 +28,13 @@ $(".spinner").hide();
 //   $(".spinner").fadeIn('slow');
 // });
 
-
 $("#barcode-picture-home").click(function() {
   setTimeout(
   function()
   {
     $("#barcode-picture-home").hide();
     $(".spinner").fadeIn('slow');
-  }, 10000);
+  }, 2000);
 
 })
 
