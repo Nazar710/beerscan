@@ -139,7 +139,7 @@ BeerFood.create!(beer: tuborg_skoll, food: salad)
 puts "Creating beer 6"
 url = "https://res.cloudinary.com/dmezivgcm/image/upload/v1566982393/roed_tuborg_33cl_vaad_cmyk_lj6fsn.png"
 
-rod_tuborg = Beer.new(name: "Rod Tuborg", beer_story: "Red Tuborg is a dark, bottom-fermented lager beer that comes from Barvaria in Germany. Red Tuborg is a so-called all-malt beer, meaning that only malt and no raw grains (maize) are used. Four types of malt is used: münchener malt, pilsner malt and a bit of caramel and color malt. Together, these ingredients give the Tuborg yeast the distinctive reddish color, a very rich flavor and a rich foam. Ever since 1875, the Red Tuborg recipe has stayed the same.", upc: "5740700301544", alcohol: 4.3, temperature: 6, rating: 5, IBU: 30)
+rod_tuborg = Beer.new(name: "Rod Tuborg", beer_story: "Red Tuborg is a dark, bottom-fermented lager beer that comes from Barvaria in Germany. Red Tuborg is a so-called all-malt beer, meaning that only malt and no raw grains (maize) are used. Four types of malt is used: münchener malt, pilsner malt and a bit of caramel and color malt. Together, these ingredients give the Tuborg yeast the distinctive reddish color, a very rich flavor and a rich foam. Ever since 1875, the Red Tuborg recipe has stayed the same.", upc: "5740700301544", alcohol: 4.3, temperature: 6, rating: 5, ibu: 10)
 
 rod_tuborg.category = pilsner
 rod_tuborg.color = dark_brown
@@ -202,7 +202,7 @@ BeerFood.create!(beer: tuborg_gold, food: japanese)
 
 puts "Creating beer 10"
 url = "https://res.cloudinary.com/dmezivgcm/image/upload/v1566984504/lu_05_flasche_urkraft_2014_wznxgf.png"
-lubzer_urcraft = Beer.new(name: "Lübzer Urkraft", beer_story: "Lübzer Urkraft is a beer with a special degree of Lübzer taste. The unique combination of zesty flavour and an enriched alcohol content of 6% result in a one and only taste experience. A balanced bottom-fermented beer. Lübzer Urkraft has a full-bodied, distinctive taste. The glass bottle is transparent, highlighting its contemporary design, and it lets the beer’s amber colour sparkle through.", upc: "5740700301544", alcohol: 6, temperature: 15, rating: 4, IBU: 60)
+lubzer_urcraft = Beer.new(name: "Lübzer Urkraft", beer_story: "Lübzer Urkraft is a beer with a special degree of Lübzer taste. The unique combination of zesty flavour and an enriched alcohol content of 6% result in a one and only taste experience. A balanced bottom-fermented beer. Lübzer Urkraft has a full-bodied, distinctive taste. The glass bottle is transparent, highlighting its contemporary design, and it lets the beer’s amber colour sparkle through.", upc: "5740700301544", alcohol: 6, temperature: 15, rating: 4, ibu: 11)
 lubzer_urcraft.category = pilsner
 lubzer_urcraft.color = light_yellow
 lubzer_urcraft.brewery = tuborg_brew
@@ -217,7 +217,7 @@ BeerFood.create!(beer: lubzer_urcraft, food: pasta)
 
 puts "Creating beer 11"
 url = "https://res.cloudinary.com/dmezivgcm/image/upload/v1566987652/ru_grimbergen-double-ambree_qfumsc.png"
-grimbergen_double_ambree = Beer.new(name: "Grimbergen Ambrée", beer_story: "Grimbergen Double-Ambrée is a full-bodied beer. The use of two roasted malts give it its amber colour. The taste is rich, deep and ample while its subtly caramelized notes gives it a bittersweet sensation.", upc: "5740700301544", alcohol: 6.5, temperature: 15, rating: 5, IBU: 45)
+grimbergen_double_ambree = Beer.new(name: "Grimbergen Ambrée", beer_story: "Grimbergen Double-Ambrée is a full-bodied beer. The use of two roasted malts give it its amber colour. The taste is rich, deep and ample while its subtly caramelized notes gives it a bittersweet sensation.", upc: "5740700301544", alcohol: 6.5, temperature: 15, rating: 5, ibu: 8)
 grimbergen_double_ambree.category = ale
 grimbergen_double_ambree.color = brown
 grimbergen_double_ambree.brewery = grimbergen_brew
@@ -231,7 +231,7 @@ BeerFood.create!(beer: grimbergen_double_ambree, food: seafood)
 
 puts "Creating beer 12"
 url = "https://res.cloudinary.com/dmezivgcm/image/upload/v1566988432/grimbergen-poire-bottle-33-cl_kqgptk.png"
-grimbergen_poire = Beer.new(name: "Grimbergen Poire", beer_story: "In the Middle Ages, some monasteries sheltered pear cultures. In respect for their traditions, Grimbergen launches Grimbergen Poire. Grimbergen Poire combines the authenticity of Grimbergen abbey beers with the sweet but intense taste of pear.", upc: "5740700301544", alcohol: 6, temperature: 15, rating: 5, IBU: 25)
+grimbergen_poire = Beer.new(name: "Grimbergen Poire", beer_story: "In the Middle Ages, some monasteries sheltered pear cultures. In respect for their traditions, Grimbergen launches Grimbergen Poire. Grimbergen Poire combines the authenticity of Grimbergen abbey beers with the sweet but intense taste of pear.", upc: "5740700301544", alcohol: 6, temperature: 15, rating: 5, ibu: 8)
 grimbergen_poire.category = ale
 grimbergen_poire.color = brown
 grimbergen_poire.brewery = grimbergen_brew
@@ -245,7 +245,7 @@ BeerFood.create!(beer: grimbergen_poire, food: pasta)
 
 puts "Creating beer 13"
 url = "https://res.cloudinary.com/dmezivgcm/image/upload/v1566988645/ru_grimbergen-rouge_i5mlm2.png"
-grimbergen_rouge = Beer.new(name: "Grimbergen Rouge", beer_story: "ROUNDED & FRUITY. Grimbergen Rouge, flavoured with red fruits, subtly combines the character of an Abbey beer with the sweetness and notes of strawberry, cranberry and elderberry. Its purple colour with intense reflections and its slightly pink foam indicates a unique flavour.", upc: "5740700301544", alcohol: 6, temperature: 15, rating: 5, IBU: 60)
+grimbergen_rouge = Beer.new(name: "Grimbergen Rouge", beer_story: "ROUNDED & FRUITY. Grimbergen Rouge, flavoured with red fruits, subtly combines the character of an Abbey beer with the sweetness and notes of strawberry, cranberry and elderberry. Its purple colour with intense reflections and its slightly pink foam indicates a unique flavour.", upc: "5740700301544", alcohol: 6, temperature: 15, rating: 5, ibu: 10)
 grimbergen_rouge.category = ale
 grimbergen_rouge.color = brown
 grimbergen_rouge.brewery = grimbergen_brew
@@ -259,7 +259,7 @@ BeerFood.create!(beer: grimbergen_rouge, food: cheese)
 
 puts "Creating beer 14"
 url = "https://res.cloudinary.com/dmezivgcm/image/upload/v1566989300/brooklyn_american_ale_s5az3y.png"
-grimbergen_double_ambree = Beer.new(name: "Brooklyn American Ale", beer_story: "In New York City, things are complicated, fast and loud. So sometimes Newyorkers want a nice beer that's simply tasty and refreshing. Brooklyn American Ale is easygoing, versatile, and dependable. It's a beer you and your friends can hang out with, no matter where you're from. ", upc: "5740700301544", alcohol: 4.5, temperature: 11, rating: 4, IBU: 30)
+grimbergen_double_ambree = Beer.new(name: "Brooklyn American Ale", beer_story: "In New York City, things are complicated, fast and loud. So sometimes Newyorkers want a nice beer that's simply tasty and refreshing. Brooklyn American Ale is easygoing, versatile, and dependable. It's a beer you and your friends can hang out with, no matter where you're from. ", upc: "5740700301544", alcohol: 4.5, temperature: 11, rating: 4, ibu: 4)
 grimbergen_double_ambree.category = ale
 grimbergen_double_ambree.color = light_brown
 grimbergen_double_ambree.brewery = brooklyn_brew
@@ -274,7 +274,7 @@ BeerFood.create!(beer: grimbergen_double_ambree, food: cheese)
 puts "Creating beer 15"
 url = "https://res.cloudinary.com/dmezivgcm/image/upload/v1566989294/se_brooklyn-summer_nhh2ex.png"
 
-brooklyn_summer_ale = Beer.new(name: "Brooklyn Summer Ale", beer_story: "Summer in Brooklyn is all about following your impulses, winging it from beaches and barbecues to stoops and rooftops. Brooklyn Summer Ale is a refreshing, flavourful pale ale made to accompany you on all your warm weather adventures. 100% British 2-row barley brings its famed bready flavors, capped off with German and American hops to provide a snappy, clean bitterness and a bright, floral aroma. It's a sunny pale ale, Brooklyn style.", upc: "5740700301544", alcohol: 5, temperature: 8, rating: 4, IBU: 50)
+brooklyn_summer_ale = Beer.new(name: "Brooklyn Summer Ale", beer_story: "Summer in Brooklyn is all about following your impulses, winging it from beaches and barbecues to stoops and rooftops. Brooklyn Summer Ale is a refreshing, flavourful pale ale made to accompany you on all your warm weather adventures. 100% British 2-row barley brings its famed bready flavors, capped off with German and American hops to provide a snappy, clean bitterness and a bright, floral aroma. It's a sunny pale ale, Brooklyn style.", upc: "5740700301544", alcohol: 5, temperature: 8, rating: 4, ibu: 6)
 
 brooklyn_summer_ale.category = ale
 brooklyn_summer_ale.color = light_brown
@@ -306,7 +306,7 @@ url = "https://res.cloudinary.com/tatigrassi/image/upload/v1567090891/masks_land
 hazesan_llihops = Beer.new(name: "Hazesan Allihops", beer_story: "Hazy pale ale. A hazy straw coloured New England style pale ale giving tropical and citrus flavours resulting in sweet fruity notes and a refreshingly light finish.", upc: "5740700301544", alcohol: 7.9, temperature: 6, rating: 4, ibu: 12)
 hazesan_llihops.category = ale
 hazesan_llihops.color = brown
-hazesan_llihops.brewery = mikkeller
+hazesan_llihops.brewery = mikkeller_brew
 hazesan_llihops.remote_photo_url = url
 hazesan_llihops.glass = tumbler
 hazesan_llihops.save!
@@ -320,7 +320,7 @@ url = "https://res.cloudinary.com/tatigrassi/image/upload/v1567090916/masks_land
 american_dream_pils = Beer.new(name: "American Dream Pils", beer_story: "Extra dry-hopped pilsner. Crisp American Pilsner style beer with a malty kick. This version has even more hops.", upc: "73628240920001", alcohol: 6.8, temperature: 7, rating: 4, ibu: 13)
 american_dream_pils.category = ale
 american_dream_pils.color = dark_brown
-american_dream_pils.brewery = mikkeller
+american_dream_pils.brewery = mikkeller_brew
 american_dream_pils.remote_photo_url = url
 american_dream_pils.glass = tumbler
 american_dream_pils.save!
@@ -334,7 +334,7 @@ url = "https://res.cloudinary.com/tatigrassi/image/upload/v1567090917/masks_land
 weird_weather = Beer.new(name: "Weird Weather", beer_story: "An IPA extra dry-hopped pilsner. Crisp American Pilsner style beer with a malty kick. This version has even more hops.", upc: "73628240920001", alcohol: 4.8, temperature: 6, rating: 5, ibu: 16)
 weird_weather.category = ipa
 weird_weather.color = brown
-weird_weather.brewery = mikkeller
+weird_weather.brewery = mikkeller_brew
 weird_weather.remote_photo_url = url
 weird_weather.glass = tumbler
 weird_weather.save!
@@ -348,7 +348,7 @@ url = "https://res.cloudinary.com/tatigrassi/image/upload/v1567090918/masks_land
 henry_his_science = Beer.new(name: "Henry & His Science", beer_story: "Henry put on his science gloves and came up with his own yeast culture perfect for this low ABV Microbiologically flavored ale.", upc: "73628240920001", alcohol: 5.2, temperature: 7, rating: 4, ibu: 14)
 henry_his_science.category = ale
 henry_his_science.color = light_brown
-henry_his_science.brewery = mikkeller
+henry_his_science.brewery = mikkeller_brew
 henry_his_science.remote_photo_url = url
 henry_his_science.glass = tumbler
 henry_his_science.save!
@@ -362,7 +362,7 @@ url = "https://res.cloudinary.com/tatigrassi/image/upload/v1567090917/masks_land
 limbo_raspberry = Beer.new(name: "Limbo Raspberry", beer_story: "A new and refreshing non-alcoholic beer with tons and tons of raspberries for a light, fruity & tart palate.", upc: "704978620001", alcohol: 0, temperature: 8, rating: 3, ibu: 9)
 limbo_raspberry.category = pilsner
 limbo_raspberry.color = light_brown
-limbo_raspberry.brewery = mikkeller
+limbo_raspberry.brewery = mikkeller_brew
 limbo_raspberry.remote_photo_url = url
 limbo_raspberry.glass = tumbler
 limbo_raspberry.save!
@@ -376,7 +376,7 @@ url = "https://res.cloudinary.com/tatigrassi/image/upload/v1567090917/masks_land
 big_worster = Beer.new(name: "Big Worster", beer_story: "The perfect cold-recovery beer, it warms your throat and soul in every sip. Ideal for snowy days in your home.", upc: "704978620001", alcohol: 4.5, temperature: 9, rating: 4, ibu: 11)
 big_worster.category = ale
 big_worster.color = dark_brown
-big_worster.brewery = mikkeller
+big_worster.brewery = mikkeller_brew
 big_worster.remote_photo_url = url
 big_worster.glass = tumbler
 big_worster.save!
@@ -390,7 +390,7 @@ url = "https://res.cloudinary.com/tatigrassi/image/upload/v1567090917/masks_land
 spontan_carrot = Beer.new(name: "Spontan Carrot", beer_story: "Sour Ale brewed with carrots and aged in oak barrels. Straight from the dirt!", upc: "704978620001", alcohol: 4.9, temperature: 8, rating: 5, ibu: 16)
 spontan_carrot.category = ale
 spontan_carrot.color = brown
-spontan_carrot.brewery = mikkeller
+spontan_carrot.brewery = mikkeller_brew
 spontan_carrot.remote_photo_url = url
 spontan_carrot.glass = tumbler
 spontan_carrot.save!
@@ -404,7 +404,7 @@ url = "https://res.cloudinary.com/tatigrassi/image/upload/v1567090917/masks_land
 i_wish_gluten_free = Beer.new(name: "I Wish Gluten Free", beer_story: "A super hopped up American Pale Ale, designed, not just for the gluten sensitive, but for all beer fans alike.", upc: "709876620001", alcohol: 6.2, temperature: 5, rating: 3, ibu:10)
 i_wish_gluten_free.category = ale
 i_wish_gluten_free.color = brown
-i_wish_gluten_free.brewery = mikkeller
+i_wish_gluten_free.brewery = mikkeller_brew
 i_wish_gluten_free.remote_photo_url = url
 i_wish_gluten_free.glass = tumbler
 i_wish_gluten_free.save!
@@ -417,8 +417,8 @@ puts "Creating beer 25"
 url = "https://res.cloudinary.com/tatigrassi/image/upload/v1567090917/masks_landing/beers_project/bottles%20and%20cans/25_yyigai.png"
 vesterbro_series = Beer.new(name: "Vesterbro Series", beer_story: "Original Mikkeller Bar house beer, now available in bottles. Brown Ale.", upc: "704978620001", alcohol: 6.1, temperature: 8, rating: 5, ibu: 15)
 vesterbro_series.category = ale
-vesterbro_series.color = bdark_brown
-vesterbro_series.brewery = mikkeller
+vesterbro_series.color = dark_brown
+vesterbro_series.brewery = mikkeller_brew
 vesterbro_series.remote_photo_url = url
 vesterbro_series.glass = tumbler
 vesterbro_series.save!
@@ -432,7 +432,7 @@ url = "https://res.cloudinary.com/tatigrassi/image/upload/v1567091485/masks_land
 kaffestout = Beer.new(name: "Kaffestout", beer_story: "Artisan Stout brewed with Lactose and Coffee.", upc: "704978620001", alcohol: 6.0, temperature: 5, rating: 3, ibu: 10)
 kaffestout.category = ale
 kaffestout.color = brown
-kaffestout.brewery = mikkeller
+kaffestout.brewery = mikkeller_brew
 kaffestout.remote_photo_url = url
 kaffestout.glass = tumbler
 kaffestout.save!
@@ -446,7 +446,7 @@ url = "https://res.cloudinary.com/tatigrassi/image/upload/v1567091485/masks_land
 chipotle_porter = Beer.new(name: "Chipotle Porter", beer_story: "A dark ale, brewed with American hops and malt, warming chili and vanilla.", upc: "704978620001", alcohol: 5.2, temperature: 6, rating: 4, ibu: 11)
 chipotle_porter.category = ale
 chipotle_porter.color = light_brown
-chipotle_porter.brewery = mikkeller
+chipotle_porter.brewery = mikkeller_brew
 chipotle_porter.remote_photo_url = url
 chipotle_porter.glass = tumbler
 chipotle_porter.save!
@@ -460,7 +460,7 @@ url = "https://res.cloudinary.com/tatigrassi/image/upload/v1567091485/masks_land
 jackie_brown = Beer.new(name: "Jackie Brown", beer_story: "A dark ale, brewed with American hops and malt, warming chili and vanilla.", upc: "704978620001", alcohol: 5.2, temperature: 6, rating: 4, ibu: 11)
 jackie_brown.category = ale
 jackie_brown.color = dark_brown
-jackie_brown.brewery = mikkeller
+jackie_brown.brewery = mikkeller_brew
 jackie_brown.remote_photo_url = url
 jackie_brown.glass = tumbler
 jackie_brown.save!
@@ -474,7 +474,7 @@ url = "https://res.cloudinary.com/tatigrassi/image/upload/v1567091485/masks_land
 jackie_brown = Beer.new(name: "Spontan Peach", beer_story: "Sour Ale brewed with Peaches & aged in Oak Barrels.", upc: "457369620001", alcohol: 6.3, temperature: 8, rating: 4, ibu: 10)
 jackie_brown.category = ale
 jackie_brown.color = brown
-jackie_brown.brewery = mikkeller
+jackie_brown.brewery = mikkeller_brew
 jackie_brown.remote_photo_url = url
 jackie_brown.glass = tumbler
 jackie_brown.save!
@@ -488,7 +488,7 @@ url = "https://res.cloudinary.com/tatigrassi/image/upload/v1567093170/masks_land
 tennets = Beer.new(name: "Tennent's", beer_story: "Brewed since 1885, delicatelly paired with notes of single malt whisky and toasted oak.", upc: "45391516931250", alcohol: 6.0, temperature: 8, rating: 4, ibu: 10)
 tennets.category = lager
 tennets.color = light_brown
-tennets.brewery = wellpark
+tennets.brewery = wellpark_brew
 tennets.remote_photo_url = url
 tennets.glass = tumbler
 tennets.save!
