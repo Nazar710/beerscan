@@ -1,3 +1,4 @@
+
 class Beer < ApplicationRecord
   belongs_to :category
   belongs_to :color
@@ -14,9 +15,22 @@ class Beer < ApplicationRecord
   validates :rating, presence: true, numericality: { only_integer: true }, inclusion: { in: [1, 2, 3, 4, 5] }
 
   include PgSearch
-  pg_search_scope :search_by_name,
+  pg_search_scope :global_search,
     against: [ :name ],
+    associated_against: {
+      category: [ :name ],
+      brewery: [ :name ]
+    },
     using: {
       tsearch: { prefix: true }
     }
+
+  def self.super_search(query)
+    food = Food.find_by(name: query.capitalize)
+    if food
+      return (global_search(query) + food.beers).uniq
+    else
+      return global_search(query)
+    end
+  end
 end
