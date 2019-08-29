@@ -485,7 +485,7 @@ BeerFood.create!(beer: jackie_brown, food: spicy)
 
 puts "Creating beer 30"
 url = "https://res.cloudinary.com/tatigrassi/image/upload/v1567093170/masks_landing/beers_project/bottles%20and%20cans/30_xfpica.png"
-tennets = Beer.new(name: "Tennent's", beer_story: "Brewed since 1885, delicatelly paired with notes of single malt whisky and toasted oak.", upc: "45391516931250", alcohol: 6.0, temperature: 8, rating: 4, ibu: 10)
+tennets = Beer.new(name: "Tennent's", beer_story: "Brewed since 1885, delicatelly paired with notes of single malt whisky and toasted oak.", upc: "5391516931250", alcohol: 6.0, temperature: 8, rating: 4, ibu: 10)
 tennets.category = lager
 tennets.color = light_brown
 tennets.brewery = wellpark
