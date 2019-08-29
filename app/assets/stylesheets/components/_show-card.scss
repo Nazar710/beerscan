@@ -1,30 +1,49 @@
 .card-show-white-box {
-  height: 800px;
+  height: 100%;
   width: 319px;
   border-radius: 5px;
   background-color: white;
-  margin-bottom: 15px;
+  margin-bottom: 30px;
+  padding-bottom: 10px;
 }
 
-.main-rate {
+.alcohol-card {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-direction: column;
+  align-items: right;
+  justify-content: space-evenly;
   padding: 15px;
-  width: 50px;
-  height: 50px;
+  width: 120px;
+  height: 53px;
   margin-top: 20px;
   margin-left: 20px;
-  background-color: $my-orange;
+  margin-bottom: -30px;
+  background-color: $my-green;
   color: white;
   font-size: 16px;
   border-radius: 5px;
 }
 
+.alcohol-percent {
+  color: white;
+  text-align: right;
+  align-items: right;
+  margin-top: -45px;
+  margin-left: 60px;
+  margin-right: 190px;
+}
+
+img.size-alcohol-icon {
+  width: 35px;
+  height: 35px;
+  margin-top: -83px;
+  margin-left: 25px;
+}
+
 .card-new-title {
   width: 170px;
   margin-left: 20px;
-  margin-top: 10px;
+  margin-top: 0px;
 }
 
 .blidding-brown-card {
@@ -52,7 +71,7 @@ img.size-rate-icon {
 
 .beer-description-card {
   width: 100px;
-  height: 200px;
+  height: 170px;
   background-color: white;
   margin-left: 20px;
   margin-top: 20px;
@@ -97,7 +116,7 @@ img.size-criteries-icon {
 }
 
 .bitterness-position {
-  margin-top: -10px;
+  margin-top: 40px;
   margin-left: 120px;
 }
 

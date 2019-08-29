@@ -87,7 +87,7 @@ BeerFood.create!(beer: tuborg, food: salad)
 BeerFood.create!(beer: tuborg, food: spicy)
 
 puts "Creating beer 2"
-url = "https://res.cloudinary.com/tatigrassi/image/upload/v1566564292/masks_landing/beers_project/bottles%20and%20cans/carlsberg-beer-png-3_mdo8ei.png"
+url = "https://res.cloudinary.com/tatigrassi/image/upload/v1567068269/masks_landing/beers_project/bottles%20and%20cans/carlsberg_bhsflv.png"
 carlsberg = Beer.new(name: "Carlsberg", beer_story: "Pilsner with a malty backbone and balanced bitterness. Aka: probably the best beer in the world.", upc: "5740700301544", alcohol: 5.4, temperature: 200000000, rating: 5)
 carlsberg.category = pilsner
 carlsberg.color = light_yellow

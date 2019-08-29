@@ -2,11 +2,11 @@
   <div class="card-index-container">
     <div class="card-show-white-box">
       <div class="blidding-brown-card" >
-        <%= cl_image_tag @beer.photo, alt: "alttext", class: "beer-size" %>
+        <%= cl_image_tag @beer.photo, alt: "beer-image", class: "beer-size" %>
       </div>
-      <div class="main-rate">
-        <h6>5.4</h6>
-      </div>
+      <div class="alcohol-card"></div>
+      <h6 class="alcohol-percent">alcohol:<br><%= @beer.alcohol %>%</h6>
+      <%= image_tag "alcohol.png", alt: "alcohol", class: "size-alcohol-icon" %>
       <div class="card-new-title">
         <h2><%= @beer.name %></h2>
         <h5><%= @beer.category.name %> - <%= @beer.brewery.name %></h5>
@@ -30,7 +30,7 @@
         <%= image_tag "minus.png", alt: "line", class: "size-criteries-icon" %>
         <%= image_tag "lemon.png", alt: "lemon", class: "size-criteries-icon" %>
         <%= image_tag "minus.png", alt: "line", class: "size-criteries-icon" %>
-        <%= image_tag "menu.png", alt: "food", class: "size-criteries-icon" %>
+        <%= image_tag "food.png", alt: "food", class: "size-criteries-icon" %>
       </div>
       <div class="criteries-content-card">
         <div class="temperature-position">
@@ -38,7 +38,7 @@
           <h5>Temperature</h5>
         </div>
         <div class="glass-position">
-          <p>This beer needs a <strong><span class="orange-text"><%= @beer.glass %> glass</span></strong></p>
+          <p>Asks for a <strong><span class="orange-text"><%= @beer.glass.name %> glass</span></strong></p>
           <h5>Ideal Glass</h5>
         </div>
         <div class="bitterness-position">
@@ -46,7 +46,11 @@
           <h5>Bitterness</h5>
         </div>
         <div class="food-position">
-          <p>Enjoy with <strong><span class="orange-text"><%= @beer.foods %></span></strong></p>
+          <p>Enjoy with
+          <% @beer.foods.each do |food| %>
+          <strong><span class="orange-text"><%= food.name %></span></strong>
+          <% end %>
+          </p>
           <h5>Harmonization</h5>
         </div>
       </div>
