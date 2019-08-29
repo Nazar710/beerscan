@@ -5,7 +5,7 @@ class BeersController < ApplicationController
   def index
     @scan = Scan.new
     if params[:query].present?
-      @beers = Beer.search_by_name(params[:query])
+      @beers = Beer.super_search(params[:query])
     else
       @beers = Beer.all
     end
