@@ -28,7 +28,7 @@
         <%= image_tag "minus.png", alt: "line", class: "size-criteries-icon" %>
         <%= image_tag "glass.png", alt: "glass", class: "size-criteries-icon"%>
         <%= image_tag "minus.png", alt: "line", class: "size-criteries-icon" %>
-        <%= image_tag "lemon.png", alt: "lemon", class: "size-criteries-icon" %>
+        <%= image_tag "lemon.png", alt: "lemon", class: "size-criteries-icon bitterness-icon" %>
         <%= image_tag "minus.png", alt: "line", class: "size-criteries-icon" %>
         <%= image_tag "food.png", alt: "food", class: "size-criteries-icon" %>
       </div>
@@ -41,10 +41,20 @@
           <p>Asks for a <strong><span class="orange-text"><%= @beer.glass.name %> glass</span></strong></p>
           <h5>Ideal Glass</h5>
         </div>
+
         <div class="bitterness-position">
           <p>This beer is <strong><span class="orange-text"><%= @beer.ibu %> IBU</span></strong></p>
           <h5>Bitterness</h5>
+
+          <div class="info-popup">
+            <div class="content">
+              <i class="fas fa-info-circle"></i>
+              <div>International Bitterness Units are a chemical measurement of the number of bittering compounds. Most beers will have a measured IBU between <strong>5</strong> (which is a very low) up to <strong>120</strong> (which is a very high).</div>
+            </div>
+          </div>
+
         </div>
+
         <div class="food-position">
           <p>Enjoy with
           <% @beer.foods.each do |food| %>

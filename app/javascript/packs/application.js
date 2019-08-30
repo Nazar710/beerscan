@@ -39,3 +39,7 @@ $("#barcode-picture-home").click(function() {
 
 })
 
+$(".bitterness-icon").click(function() {
+  $(".info-popup").toggleClass("visible");
+})
+
