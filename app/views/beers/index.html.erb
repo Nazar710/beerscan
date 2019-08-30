@@ -10,7 +10,7 @@
         <div class="name-space">
         <h5><%= beer.name.first(20) %></h5>
         <h6><%= beer.category.name %> - <%= beer.brewery.name %>, <%= beer.brewery.country.name %></h6>
-        <p><%= beer.category.description.first(55) %>...</p>
+        <p><%= beer.beer_story.first(50) %>...</p>
         </div>
         <div class="d-flex justify-content-left">
           <% beer.rating.times do %>
