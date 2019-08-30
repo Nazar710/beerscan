@@ -1,6 +1,6 @@
 <div class="card-index-background"></div>
 <div class="card-index-container">
-  <%= render "shared/search2" if alert || notice %>
+  <%= render "shared/search2" %>
   <% @beers.each do |beer| %>
     <div class="card-index">
       <div class="img-card-index">
@@ -21,7 +21,7 @@
           <% end %>
         </div>
         <div class="d-flex justify-content-right">
-         <%= link_to "See more", beer_path(beer), class: "card-btn" %>
+          <%= link_to "See more", beer_path(beer), class: "card-btn" %>
         </div>
       </div>
     </div>
