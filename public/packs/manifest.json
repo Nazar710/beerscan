@@ -1,15 +1,15 @@
 {
-  "application.js": "/packs/js/application-c7e5ed5b705f46b51999.js",
-  "application.js.map": "/packs/js/application-c7e5ed5b705f46b51999.js.map",
+  "application.js": "/packs/js/application-c530fd17583a3ca38df8.js",
+  "application.js.map": "/packs/js/application-c530fd17583a3ca38df8.js.map",
   "barcode-scan.js": "/packs/js/barcode-scan-7c46e40ca18633ce69a4.js",
   "barcode-scan.js.map": "/packs/js/barcode-scan-7c46e40ca18633ce69a4.js.map",
   "entrypoints": {
     "application": {
       "js": [
-        "/packs/js/application-c7e5ed5b705f46b51999.js"
+        "/packs/js/application-c530fd17583a3ca38df8.js"
       ],
       "js.map": [
-        "/packs/js/application-c7e5ed5b705f46b51999.js.map"
+        "/packs/js/application-c530fd17583a3ca38df8.js.map"
       ]
     },
     "barcode-scan": {

@@ -42,4 +42,7 @@ $(".bitterness-icon").click(function() {
   $(".info-popup").toggleClass("visible");
 })
 
+$(".info-popup").click(function() {
+  $(".info-popup").toggleClass("visible");
+})
 
