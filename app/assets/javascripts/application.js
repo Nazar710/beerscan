@@ -6,3 +6,4 @@
 //= require rails-ujs
 //= require ./cable.js
 
+//= require serviceworker-companion

@@ -38,3 +38,4 @@ $("#barcode-picture-home").click(function() {
 
 })
 
+
