@@ -28,7 +28,6 @@ $(".spinner").hide();
 //   $(".spinner").fadeIn('slow');
 // });
 
-
 $("#barcode-picture-home").click(function() {
   setTimeout(
   function()
@@ -42,4 +41,5 @@ $("#barcode-picture-home").click(function() {
 $(".bitterness-icon").click(function() {
   $(".info-popup").toggleClass("visible");
 })
+
 

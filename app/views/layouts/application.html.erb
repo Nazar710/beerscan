@@ -10,12 +10,25 @@
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <%#= stylesheet_pack_tag 'application', media: 'all' %> <!-- Uncomment if you import CSS in app/javascript/packs/application.js -->
-  </head>
+    <link rel='shortcut icon' type='image/x-icon' href="<%= image_path 'icons/favicon-16x16.png' %>" />
+    <link rel="manifest" href="<%= asset_path 'manifest.json' %>">
+    <link rel="apple-touch-icon" sizes="180x180" href="<%= image_path 'icons/apple-touch-icon.png' %>">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+  <link rel="manifest" href="/manifest.json" />
+<meta name="apple-mobile-web-app-capable" content="yes"></head>
   <body>
     <%= render "shared/alerts" %>
+    <%= render "shared/notice" %>
     <%= yield %>
     <%= javascript_include_tag 'application' %>
     <%= javascript_pack_tag 'application' %>
     <%= yield(:after_js) %>
   </body>
 </html>
+
+

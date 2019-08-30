@@ -1,0 +1,14 @@
+#goFS {
+
+    position: absolute;
+    padding: 10px;
+    font-size: 18px;
+    width: 100%;
+    background-color: $yellow;
+    font-family: $button-font;
+    border: none;
+    &:focus {
+    outline: none !important;
+}
+
+}
