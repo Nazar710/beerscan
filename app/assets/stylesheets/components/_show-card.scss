@@ -162,4 +162,9 @@ img.size-criteries-icon {
 .beer-story-card-content {
   color: white;
   text-shadow: 0.5px 0.5px $my-black;
+  .truncate {
+    max-height: 130px;
+    overflow: auto;
+  }
 }
+
