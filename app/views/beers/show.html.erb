@@ -65,13 +65,11 @@
       </div>
         <div class="beer-story-card beer-story-card-content">
             <h5>About this beer:</h5>
-            <p><strong><%= @beer.beer_story %></p></strong>
+           <p class="truncate"><strong><%= @beer.beer_story%></strong></p>
           <div class="beer-story-icon-card">
             <%= image_tag "beer-active-green-icon.png", alt: "beer-icon", class: "green-beer-icon" %>
           </div>
         </div>
-
-
 
     </div>
     <%= render "shared/navbar" %>
