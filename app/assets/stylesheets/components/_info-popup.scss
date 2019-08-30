@@ -1,0 +1,47 @@
+.info-popup {
+  opacity: 0;
+  width: 200px;
+  transition: 0.2s ease;
+  height: 80px;
+  position: absolute;
+  right: -8px;
+  background-color: rgba(250, 143, 17,1);
+  border: 2px solid $my-orange;
+  color: white;
+  top: -10px;
+  font-size: 8px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  padding: 10px;
+  text-align: left;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .content {
+    position: relative;
+    i {
+      color: white;
+      font-size: 12px;
+      position: absolute;
+      top: 0px;
+      right: 0px;
+    }
+  }
+}
+
+.visible {
+  opacity: 1;
+}
+
+.bitterness-icon {
+  transition: 0.2s ease;
+  cursor: pointer;
+}
+
+.bitterness-icon:active {
+  transform: translateY(-2px);
+}
+
+.nav-icon img:active {
+  transform: translateY(-2px);
+}
