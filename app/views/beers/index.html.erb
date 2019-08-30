@@ -1,6 +1,6 @@
 <div class="card-index-background"></div>
 <div class="card-index-container">
-  <%= render "shared/search2" if alert %>
+  <%= render "shared/search2" if alert || notice %>
   <% @beers.each do |beer| %>
     <div class="card-index">
       <div class="img-card-index">
@@ -28,3 +28,9 @@
   <% end %>
   <%= render "shared/navbar" %>
 </div>
+
+<script>
+  $('.input-box').val('')
+  $(".alert" ).delay(6000).fadeOut(2000);
+  $(".notice" ).delay(6000).fadeOut(2000);
+</script>
